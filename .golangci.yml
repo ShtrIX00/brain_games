@@ -1,0 +1,26 @@
+linters:
+  enable:
+    - govet
+    - revive
+
+  disable:
+    - gocyclo
+    - errcheck
+issues:
+  exclude:
+    - "Error return value is not checked"
+  exclude-files:
+    - ".*_test.go"
+  exclude-dirs:
+    - vendor
+
+run:
+  skip-dirs:
+    - vendor
+  skip-files:
+    - ".*_test.go"
+
+output:
+  formats:
+    - name: color
+      style: "auto"
